@@ -1,0 +1,29 @@
+#!/usr/bin/env -S bun
+const
+	co=[5,10],
+	l=x=>[x,-(x-1)/4],
+	kai=(a,b,c)=>(-b+((b*b-4*a*c)**.5))/(2*a),
+/*
+円と直線の交点!!
+x*x+y*y=r*r
+y=(x-1)*.25
+x*x+(x*x-2*x+1)*.0625-r*r=0
+(1.0625)*x*x+(-.125)*x+(.0625-r*r)
+*/
+	cl=r=>kai(1.0625,-.125,.0625-r*r);
+
+console.log([
+	...[
+		((r=6,s=l(cl(r)))=>({
+			r,s,e:[4,r*Math.sin(Math.acos(4/r))]
+		}))(),
+		((r=10,s=l(cl(r)))=>({
+			r,s,e:[r*Math.cos(Math.asin(5/r)),5]
+		}))()
+	].map(({r,s,e})=>(
+		e=e.map((x,i)=>x-s[i]),
+		[s,e]=[s,e].map(x=>x.map(x=>x.toFixed(3))),
+		`M${co}m${s}a${[r,r]},0,0,1,${e}`
+	))
+].join('\n').replace(/,(?=-)|(?<=,)0(?=\.\d)/g,'')
+);
