@@ -1,4 +1,4 @@
-#!/usr/bin/env -S bun
+#!/usr/bin/env -S bun --install=force
 const
 	co=[5,10],
 	l=x=>[x,-(x-1)/4],
