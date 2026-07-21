@@ -50,11 +50,11 @@ float cl(float r){return kai(vec3(1.0625,-.125,.0625-r*r));}
 
 float logo(vec3 _p,float x){
 	vec3 p=(mat4(
-		20, 0,0,0,
-		0,-20,0,0,
+		1, 0,0,0,
+		0,-1,0,0,
 		0,  0,1,0,
-		0, 20,0,0
-	)*vec4(_p,1)).xyz;
+		0, 1,0,0
+	)*vec4(_p,1)).xyz*20.;
 	
 	return
 	U(
