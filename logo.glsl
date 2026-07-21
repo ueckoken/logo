@@ -2,6 +2,8 @@ precision highp float;
 uniform float time;
 uniform vec2 resolution;
 
+// #define AAAAA
+
 const float PI=3.141592653;
 
 #define U(A,B) smin(A,B,x)
@@ -52,7 +54,7 @@ float logo(vec3 _p,float x){
 	vec3 p=(mat4(
 		1, 0,0,0,
 		0,-1,0,0,
-		0,  0,1,0,
+		0, 0,1,0,
 		0, 1,0,0
 	)*vec4(_p,1)).xyz*20.;
 	
@@ -93,19 +95,30 @@ void main(){
 		(
 			gl_FragCoord.xy+(resolution.yx-resolution.xy)*step(resolution.yx,resolution.xy)*.5
 		)/min(resolution.x,resolution.y),
+#ifndef AAAAA
 		0
+#else
+		.25/20.
+#endif
 	);
-	float t=0.;//sin(time)*.5+.501;
+#ifndef AAAAA
+	float t=0.;
+#else
+	float t=sin(time)*.5+.501;
+#endif
 	gl_FragColor=vec4(
 		mix(
+#ifndef AAAAA
 			vec3(3,.2,.4)/3.,
 			vec3(1),
-			// normalize(-vec3(
-			// 	logo(p,t)-logo(p+vec3(.01,0,0),t),
-			// 	logo(p,t)-logo(p+vec3(0,.01,0),t),
-			// 	logo(p,t)-logo(p+vec3(0,0,.01),t)
-			// )),
-			// vec3(.2),
+#else
+			normalize(-vec3(
+				logo(p,t)-logo(p+vec3(.01,0,0),t),
+				logo(p,t)-logo(p+vec3(0,.01,0),t),
+				logo(p,t)-logo(p+vec3(0,0,.01),t)
+			))*.5+.5,
+			vec3(.2),
+#endif
 			smoothstep(-.02,.02,logo(p,t))
 		),
 		1
