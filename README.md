@@ -13,7 +13,7 @@
 
 `logo.svg#<識別子>`
 
-`logo.svg#<識別子>.png`
+`logo.svg.png/logo.svg#<識別子>.png`
 
 ## colors
 - red: `#f12`

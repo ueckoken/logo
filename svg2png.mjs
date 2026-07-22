@@ -11,7 +11,7 @@ await[...new Bun.Glob('**/logo.svg').scanSync('.')].reduce(async(a,x,s)=>(
 		r.cropByBBox(b.reduce((a,x,i)=>(a['x,y,width,height'.split(',')[i]]=x,a),r.getBBox())),
 		i&&console.log(`#${i}`),
 		await Bun.write(
-			`${x}${i?`#${i}`:''}.png`,
+			`${x}.png/${x.split('/').pop()}${i?`#${i}`:''}.png`,
 			// (await renderAsync(
 			// 	s,
 			// 	{
