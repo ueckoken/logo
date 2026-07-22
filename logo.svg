@@ -4,7 +4,7 @@
 		<path id="bg" d="M6,6v20h20v-20z"/>
 		<path
 			id="main"
-			stroke="#f12" fill="none"
+			fill="none"
 			stroke-linecap="round"
 			stroke-linejoin="round"
 			d="
@@ -21,10 +21,21 @@
 			"
 		/>
 	</defs>
-	<a href="#"  transform="translate( 0,0)"><use href="#bg" fill="#fff"/><use href="#main"/></a>
-	<view id="_" viewBox="38 6 20 20"/>
-	<a href="#_" transform="translate(32,0)"><use href="#main"/></a>
-	<view id="!" viewBox="6 38 20 20"/>
-	<a href="#!" transform="translate(0,32)"><use href="#bg" fill="#222"/><use href="#main"/></a>
-	<view id="$" viewBox="0 0 64 64"/>
+
+	<a href="#"  transform="translate( 0, 0)"><use href="#bg" fill="#fff"/><use href="#main" stroke="#f12"/></a>
+	<view id="!" viewBox="38 6 20 20"/>
+	<a href="#!" transform="translate(32, 0)"><use href="#bg" fill="#222"/><use href="#main" stroke="#f12"/></a>
+	<view id="_" viewBox="70 6 20 20"/>
+	<a href="#_" transform="translate(64, 0)"><use href="#main" stroke="#f12"/></a>
+
+	<view id="-"  viewBox="6 38 20 20"/>
+	<a href="#-"  transform="translate( 0,32)"><use href="#bg" fill="#fff"/><use href="#main" stroke="#222"/></a>
+	<view id="-!" viewBox="38 38 20 20"/>
+	<a href="#-!" transform="translate(32,32)"><use href="#bg" fill="#222"/><use href="#main" stroke="#fff"/></a>
+	<view id="-_" viewBox="6 70 20 20"/>
+	<a href="#-_" transform="translate(0,64)"><use href="#main" stroke="#222"/></a>
+	<view id="-!_" viewBox="38 70 20 20"/>
+	<a href="#-!_" transform="translate(32,64)"><use href="#main" stroke="#fff"/></a>
+	
+	<view id="$" viewBox="0 0 96 96"/>
 </svg>
