@@ -1,0 +1,1 @@
+linear_extrude(1)offset(2)import("logo_scad.svg");
