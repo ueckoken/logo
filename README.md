@@ -1,8 +1,8 @@
 # logo
 工学研究部のロゴ
 
-![logo](logo.svg)
-![logo all](logo.svg#$)
+![logo](assets/logo.svg)
+![logo all](assets/logo.svg#$)
 
 以下の識別子が画像に対応
 |      |       |     |
@@ -11,16 +11,20 @@
 |  `-` |  `-!` |     |
 | `-_` | `-!_` |     |
 
-`logo.svg#<識別子>`
+`wrangler dev`
 
-`logo.svg.png/logo.svg#<識別子>.png`
+`localhost:8787/logo.svg#<識別子>`
+
+`localhost:8787/logo.png?<識別子>`
 
 ## langs
-- SVG
-  - PNG
-  - OpenSCAD
-    - STL
-- GLSL (3D SDF)
+- [SVG](./assets/logo.svg)
+  - PNG: use wrangler or [`svg2png.mjs`](./tools/svg2png.mjs) to get
+- [SVG (thin for OpenSCAD)](./assets/logo_scad.svg)
+  - [OpenSCAD](./assets/logo.scad)
+    - [STL](./assets/logo.stl)
+- [GLSL (3D SDF)](./assets/logo.glsl)
+- [PNG (16x16)](./assets/logo_16.png)
 
 ## colors
 - red: `#f12`

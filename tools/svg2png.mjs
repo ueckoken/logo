@@ -1,7 +1,7 @@
 #!/usr/bin/env -S bun --install=force
 import{renderAsync,Resvg}from'@resvg/resvg-js';
 
-await[...new Bun.Glob('**/logo.svg').scanSync('.')].reduce(async(a,x,s)=>(
+await[...new Bun.Glob('**/logo.svg').scanSync({followSymlinks:true})].reduce(async(a,x,s)=>(
 	await a,
 	console.log(x),
 	s=await Bun.file(x).text(),

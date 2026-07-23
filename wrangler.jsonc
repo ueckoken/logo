@@ -1,0 +1,14 @@
+{
+	"$schema":"node_modules/wrangler/config-schema.json",
+	"name":"logo",
+	"compatibility_date":"2026-07-13",
+	"main":"./index.mjs",
+	"routes":[
+		{"pattern":"logo.ueckoken.club","custom_domain":true}
+	],
+	"assets":{
+		"directory":"./assets",
+		"binding":"ASSETS"
+	},
+	"observability":{"enabled":true}
+}
