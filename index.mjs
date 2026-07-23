@@ -20,7 +20,7 @@ export default{
 	fetch:async(req,env,ctx)=>((
 			url=new URL(req.url)
 		)=>({
-			'/logo.png':async _=>new Response(await render({svg:await(await env.ASSETS.fetch('https://a/logo.svg')).text(),id:url.search.slice(1)}))
+			'/logo.png':async _=>new Response(await render({svg:await(await env.ASSETS.fetch(`${url.origin}/logo.svg`)).text(),id:url.search.slice(1)}))
 		}[url.pathname]??(_=>env.ASSETS.fetch(req)))()
 	)()
 }
