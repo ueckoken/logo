@@ -22,7 +22,7 @@
 		/>
 	</defs>
 
-	<a href="#"  transform="translate( 0, 0)"><use href="#bg" fill="#fff"/><use href="#main" stroke="#f12"/></a>
+	<a href=""   transform="translate( 0, 0)"><use href="#bg" fill="#fff"/><use href="#main" stroke="#f12"/></a>
 	<view id="!" viewBox="38 6 20 20"/>
 	<a href="#!" transform="translate(32, 0)"><use href="#bg" fill="#222"/><use href="#main" stroke="#f12"/></a>
 	<view id="_" viewBox="70 6 20 20"/>
