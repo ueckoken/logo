@@ -26,12 +26,12 @@
 - [GLSL (3D SDF)](./assets/logo.glsl)
 - [PNG (16x16)](./assets/logo_16.png)
 
-## colors
+
+## design
 - red: `#f12`
 - light: `#fff`
 - dark: `#222`
 
-## 設計
 ```
 キャンバス: 20x20
 パス定義域: 24x24
@@ -42,6 +42,7 @@
   円[半径=10]
 ]
 ```
+![logo design](assets/logo.svg#d)
 
 ## ガイドラインFAQ
 ### 切り抜くときは?
