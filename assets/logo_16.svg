@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<desc>ueckoken logo square 16x16</desc>
+	<defs>
+		<path
+			id="bg"
+			d="
+			M1,0
+			h14
+			v1h1
+			v14
+			h-1v1
+			h-14
+			v-1h-1
+			v-14
+			h1z
+			"
+		/>
+		<path
+			id="main"
+			d="
+			M0,2 h7v1h-2
+			v4
+			h10v1h-1
+			v2
+			h2v1h-2
+			v5h-1v-5
+			h-1
+			v3h-1v1h-1v-1h1v-3
+			h-1
+			v3h-2
+			v1h-1v-4
+			h-1v1h-1v-1h1v-1h1v-2
+			h-6v-1h3
+			v-4
+			h-4z
+			M8,8 v2h3v-2z 
+			M12,8 v2h1v-2z
+			M8,11 v2h1v-2z
+			"
+		/>
+	</defs>
+	<use href="#bg" fill="#fff" />
+	<use href="#main" fill="#f12" />
+</svg>
