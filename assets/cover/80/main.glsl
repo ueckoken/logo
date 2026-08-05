@@ -117,7 +117,7 @@ void main(){
 		.001
 
 	);
-	float t=0.;
+	float t=.01;
 
 	float d=clamp(-logo(p,t)*2./radius,0.,PI/2.);
 	float b=smoothstep(0.,.2,d);
